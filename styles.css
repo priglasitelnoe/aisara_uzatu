@@ -32,7 +32,17 @@
 
 @font-face {
   font-family: "Bickham Script KZ";
-  src: url("fonts/Bickham_Script_Pro_3_Regular_kz.otf") format("opentype");
+  src:
+    url("fonts/Bickham_Script_Pro_3_Regular_kz.woff") format("woff"),
+    url("fonts/Bickham_Script_Pro_3_Regular_kz.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Asylbek Shelley KZ";
+  src: url("fonts/AsylbekM02Shelley.kz.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -236,6 +246,23 @@ a {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.72);
 }
 
+.guest-text {
+  width: min(78%, 350px);
+  margin-top: 2vh;
+  color: #6f1830;
+  font-family: "Asylbek Shelley KZ", "Cormorant Garamond", Georgia, serif;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+
+.guest-text p {
+  margin: 0;
+  font-size: clamp(34px, 8.7vw, 50px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.12;
+}
+
 .text-flow p {
   margin: 0 0 clamp(18px, 2.8vh, 28px);
   color: #9b6470;
@@ -246,11 +273,20 @@ a {
 
 .text-flow .script-title {
   color: var(--wine);
-  font-family: var(--display);
-  font-size: clamp(25px, 6.2vw, 36px);
-  font-style: italic;
-  font-weight: 600;
-  line-height: 1.18;
+  font-family: "Asylbek Shelley KZ", "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(34px, 8.6vw, 50px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+.text-flow .poem-text {
+  color: var(--wine);
+  font-family: "Asylbek Shelley KZ", "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(30px, 7.5vw, 44px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.1;
 }
 
 .text-flow h1 {
@@ -261,6 +297,15 @@ a {
   font-style: italic;
   font-weight: 600;
   line-height: 1.08;
+}
+
+.text-flow .script-name {
+  color: #9b1237;
+  font-family: "Bickham Script KZ", "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(90px, 21vw, 130px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.76;
 }
 
 .date-screen {
@@ -358,14 +403,32 @@ a {
   text-align: center;
 }
 
-.address {
-  max-width: 100%;
-  margin: 18px auto 28px;
+.district {
+  margin: 18px 0 4px;
   color: #7a4752;
   font-family: var(--display);
-  font-size: clamp(15px, 3.45vw, 18px);
+  font-size: clamp(21px, 5.2vw, 30px);
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.15;
+}
+
+.venue-name {
+  margin: 0;
+  color: var(--wine);
+  font-family: "Bickham Script KZ", "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(86px, 22vw, 130px);
+  font-weight: 400;
+  line-height: 0.74;
+}
+
+.address {
+  max-width: 100%;
+  margin: 8px auto 0;
+  color: #7a4752;
+  font-family: var(--display);
+  font-size: clamp(21px, 5.2vw, 30px);
+  font-weight: 600;
+  line-height: 1.15;
   white-space: nowrap;
 }
 
@@ -662,7 +725,7 @@ a {
   }
 
   .address {
-    font-size: clamp(13px, 3.2vw, 16px);
+    font-size: clamp(21px, 5.2vw, 30px);
   }
 }
 
@@ -674,12 +737,21 @@ a {
   }
 
   .text-flow .script-title {
-    font-size: clamp(22px, 5.6vw, 32px);
+    font-size: clamp(32px, 8vw, 46px);
   }
 
-  .text-flow h1 {
+  .text-flow .poem-text {
+    font-size: clamp(28px, 7vw, 40px);
+    line-height: 1.08;
+  }
+
+  .text-flow h1:not(.script-name) {
     margin-bottom: 16px;
     font-size: clamp(32px, 8vw, 46px);
+  }
+
+  .text-flow .script-name {
+    font-size: clamp(86px, 20vw, 122px);
   }
 
   .final-content p {
