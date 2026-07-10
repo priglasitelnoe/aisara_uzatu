@@ -289,6 +289,12 @@ a {
   line-height: 1.1;
 }
 
+.text-flow .invitation-poem {
+  margin-bottom: 0;
+  font-size: clamp(28px, 7vw, 42px);
+  line-height: 1.16;
+}
+
 .text-flow h1 {
   margin: 0 0 clamp(18px, 2.8vh, 28px);
   color: #9b1237;
@@ -463,6 +469,7 @@ a {
 
 .button--map {
   width: min(100%, 260px);
+  margin-top: 18px;
 }
 
 .rsvp-screen {
